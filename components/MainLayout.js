@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-export default function MainLayout({ name, title, children }) {
+export default function MainLayout({ title, children }) {
   return (
     <>
         <Head>
@@ -24,7 +24,6 @@ export default function MainLayout({ name, title, children }) {
             </header>
             <main>
             {children}
-            {name}
             </main>
             <footer>
             footer
