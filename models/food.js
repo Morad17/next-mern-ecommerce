@@ -14,11 +14,12 @@ const FoodSchema = new Schema({
 
     },
     allegens: Array,
+    image: String,
     foodType: String,
     subCategories: Array,
 
 })
 
-const Food = mongoose.models?.Food  || mongoose.model('foods', FoodSchema)
+const Food = mongoose.models.Food  || mongoose.model('Food', FoodSchema)
 
 export default Food

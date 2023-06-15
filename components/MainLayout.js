@@ -17,6 +17,7 @@ export default function MainLayout({ title, children }) {
                 </Link>
                 <div className="">
                     <Link href="/basket">Basket</Link>
+                    <Link href="/allFoods">All Foods</Link>
                     <Link href="/login">Login</Link>
                     <Link href="/register">Register</Link>
                 </div>
