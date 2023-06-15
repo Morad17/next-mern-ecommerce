@@ -20,5 +20,5 @@ export default function Home() {
   const productNames = productsInfo.map(p => p.name)
   console.log(productNames);
 
-  return <MainLayout title="Next-Commerce">{productsInfo.map(p => p.name)}</MainLayout>
+  return <MainLayout title="Next-Commerce">{productNames}</MainLayout>
 }
