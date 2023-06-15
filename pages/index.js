@@ -1,25 +1,24 @@
 import { useEffect, useState } from "react"
 import MainLayout from "../components/MainLayout"
-import layout from "../components/layout"
+
 
 export default function Home() {
 
-  const [productsInfo, setProductsInfo ] = useState('')
+  const [productsInfo, setProductsInfo ] = useState([])
   const [loading, isLoading ] = useState(true)
 
-  useEffect(()=> {
-    if (loading === true){
-      
-      fetch('/api/products')
-      .then(res =>  res.json())
+  useEffect(()=> { 
+    fetch('http://localhost:3000/api/products')
+      .then(response => response.json())
       .then(json => setProductsInfo(json))
-      isLoading(false)
-    }
+      .catch((err) => {
+        console.log(err);
+      })
     
   }, [])
 
-  // const productNames = productsInfo.map(p => p.name)
-  // console.log(productNames);
+  const productNames = productsInfo.map(p => p.name)
+  console.log(productNames);
 
-  return <MainLayout title="Next-Commerce">Home</MainLayout>
+  return <MainLayout title="Next-Commerce">{productsInfo.map(p => p.name)}</MainLayout>
 }
