@@ -5,15 +5,31 @@ import FoodCard from '../components/foodCard'
 export default function allFoods() {
 
 const [foodsInfo, setFoodsInfo ] = useState(null)
+const [foodTypes, setFoodTypes ] = useState(null)
 const [loading, isLoading ] = useState(true)
 
-useEffect(()=> { 
-    fetch('http://localhost:3000/api/foods')
+const getAllFoods = () => {
+  fetch('http://localhost:3000/api/foods')
     .then(response => response.json())
     .then(json => setFoodsInfo(json))
     .catch((err) => {
         console.log(err);
     })
+}
+
+const getAllFoodTypes = () => {
+  fetch('http://localhost:3000/api/foodCategories')
+  .then(res => res.json())
+  .then(json => setFoodTypes(json))
+  .catch((err) => {
+    console.log(err);
+  })
+}
+
+useEffect(()=> { 
+    getAllFoods()
+    getAllFoodTypes()
+
 }, [])
 console.log(foodsInfo);
 

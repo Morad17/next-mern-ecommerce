@@ -6,7 +6,7 @@ const FoodSchema = new Schema({
     cost: Number,
     calorie: String,
     nutrition100g: {
-        carbohydrade: Number,
+        carbohydrate: Number,
         fat: Number ,
         protein: Number ,
         salt: Number ,
