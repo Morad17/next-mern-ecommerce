@@ -3,8 +3,8 @@ import mongoose,{ Schema } from "mongoose";
 const FoodSchema = new Schema({
     name: String,
     description: String,
-    cost: Number,
-    calorie: String,
+    cost: String,
+    calorie: Number,
     nutrition100g: {
         carbohydrate: Number,
         fat: Number ,
@@ -19,6 +19,8 @@ const FoodSchema = new Schema({
     subCategories: Array,
 
 })
+
+
 
 const Food = mongoose.models.Food  || mongoose.model('Food', FoodSchema)
 

@@ -17,24 +17,24 @@ const getAllFoods = () => {
     })
 }
 
-const getAllFoodTypes = () => {
-  fetch('http://localhost:3000/api/foodCategories')
-  .then(res => res.json())
-  .then(json => setFoodTypes(json))
-  .catch((err) => {
-    console.log(err);
-  })
-}
+// const getAllFoodTypes = () => {
+//   fetch('http://localhost:3000/api/foodCategories')
+//   .then(res => res.json())
+//   .then(json => setFoodTypes(json))
+//   .catch((err) => {
+//     console.log(err);
+//   })
+// }
 
 useEffect(()=> { 
     getAllFoods()
-    getAllFoodTypes()
+    // getAllFoodTypes()
 
 }, [])
 console.log(foodsInfo);
 
-// const foodsCategories = foodsInfo?.map(f => f.foodType)
-// console.log(foodsCategories);
+const foodsCategories = foodsInfo?.map(f => f.foodType)
+console.log(foodsCategories);
 
   return (
     <div>
