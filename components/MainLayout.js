@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import MainNav from './MainNav'
 
 export default function MainLayout({ title, children }) {
   return (
@@ -11,7 +12,7 @@ export default function MainLayout({ title, children }) {
         </Head>
         <div>
             <header>
-            <nav className="flex">
+            {/* <nav className="flex">
                 <Link href="/" className='text-lg font-bold'>
                     NextCommerce
                 </Link>
@@ -21,7 +22,8 @@ export default function MainLayout({ title, children }) {
                     <Link href="/login">Login</Link>
                     <Link href="/register">Register</Link>
                 </div>
-            </nav>
+            </nav> */}
+            <MainNav />
             </header>
             <main>
             {children}
