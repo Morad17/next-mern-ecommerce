@@ -12,17 +12,6 @@ export default function MainLayout({ title, children }) {
         </Head>
         <div>
             <header>
-            {/* <nav className="flex">
-                <Link href="/" className='text-lg font-bold'>
-                    NextCommerce
-                </Link>
-                <div className="">
-                    <Link href="/basket">Basket</Link>
-                    <Link href="/allFoods">All Foods</Link>
-                    <Link href="/login">Login</Link>
-                    <Link href="/register">Register</Link>
-                </div>
-            </nav> */}
             <MainNav />
             </header>
             <main>
