@@ -1,13 +1,17 @@
 import MainLayout from '../components/MainLayout'
+import { FoodsContextProvider } from '../components/foodContext'
 import '../styles/globals.css'
 import '/public/assets/styles/FoodCard.css'
 // import '/public/assets/styles/MainNav.css'
 
 function MyApp({ Component, pageProps }) {
   return(
-    <MainLayout>
-      <Component {...pageProps} />
-    </MainLayout>
+    <FoodsContextProvider>
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
+    </FoodsContextProvider>
+    
   )
   
   

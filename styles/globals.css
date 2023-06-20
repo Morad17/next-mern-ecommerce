@@ -74,3 +74,43 @@ a {
 .footer-description, .footer-links, .copyright{
   margin-top: 1vh;
 }
+
+/*-----Food Card---*/
+
+.food-card{
+  width: 25vw;
+  text-align: center;
+  margin: 1vh 2vw;
+  border: 1px solid gray;
+}
+.card-title{
+  padding: 10px;
+  margin: 0;
+  font-size: 1.7rem;
+}
+.card-image img{
+  width: 100%;
+  object-fit: cover;
+}
+.card-nutrition{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-keys, .card-values{
+  list-style: none;
+}
+
+.card-cost{
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ingredients, .allegens{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}

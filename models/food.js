@@ -13,11 +13,11 @@ const FoodSchema = new Schema({
         sugars: Number ,
 
     },
+    ingredient: Array,
     allegens: Array,
     image: String,
     foodType: String,
     subCategories: Array,
-
 })
 
 
