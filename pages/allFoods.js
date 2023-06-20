@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import FoodCard from '../components/foodCard'
+import { initMongoose } from "../lib/mongoose"
+import { findAllFoods } from "./api/foods"
 
 
 export default function allFoods() {
@@ -8,7 +10,7 @@ const [foodsInfo, setFoodsInfo ] = useState(null)
 const [foodTypes, setFoodTypes ] = useState(null)
 const [loading, isLoading ] = useState(true)
 
-const getAllFoods = () => {
+const getAllFoods = ({}) => {
   fetch('http://localhost:3000/api/foods')
     .then(response => response.json())
     .then(json => setFoodsInfo(json))
@@ -41,4 +43,16 @@ console.log(foodsCategories);
         { foodsInfo ? foodsInfo.map( (food, key) => {return <FoodCard food={food} key={key}/>}) : <p>Food</p> }
     </div>
   )
+}
+
+export async function getServerSideProps() {
+  await initMongoose();
+
+  const foods = await findAllFoods()
+
+  return {
+    props: {
+      products: JSON.parse(JSON.stringify(foods))
+    }
+  }
 }
