@@ -5,6 +5,7 @@
 
 :root{
   --primary-red: #e1463b;
+  --footer-gray: #c9c9c9
 }
 
 html,
@@ -58,4 +59,18 @@ a {
 
 .nav-user-links{
   margin: 0;
+}
+
+/*----Footer---*/
+
+.footer{
+  margin-top: 10vh;
+  text-align: center;
+  overflow: hidden;
+  background-color: var(--footer-gray);
+  font-size: 1.2rem;
+}
+
+.footer-description, .footer-links, .copyright{
+  margin-top: 1vh;
 }

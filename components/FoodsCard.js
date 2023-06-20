@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-export default function foodCard({
+export default function foodsCard({
     food: {id, name, description, cost, calorie, nutrition100g, allegens, image, 
         foodType, subCategories}
 }) {
