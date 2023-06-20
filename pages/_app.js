@@ -1,5 +1,6 @@
 import '../styles/globals.css'
-import '../styles/foodCard.css'
+import '/public/assets/styles/FoodCard.css'
+// import '/public/assets/styles/MainNav.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

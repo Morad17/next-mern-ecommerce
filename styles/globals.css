@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root{
+  --primary-red: #e1463b;
+}
+
 html,
 body {
   padding: 0;
@@ -21,4 +26,36 @@ a {
 
 .bold{
   font-weight: bold;
+}
+
+/*----Main Nav----*/
+.main-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: var(--primary-red);
+  color: white;
+  height: 5vh;
+  font-size: 1.4rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.logo{
+  margin-left: 1vw;
+}
+.nav-links-logo{
+  display: flex;
+  flex-direction: row;
+}
+.nav-home-links{
+  margin: 0;
+}
+
+.nav-links{
+  margin: 0 .7vw;
+}
+
+.nav-user-links{
+  margin: 0;
 }
