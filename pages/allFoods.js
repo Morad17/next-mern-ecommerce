@@ -2,14 +2,13 @@ import { useEffect, useState } from "react"
 import FoodsCard from '../components/FoodsCard'
 import { initMongoose } from "../lib/mongoose"
 import { findAllFoods } from "./api/foods"
+import { useContext } from "react"
+import { FoodsContext } from "../components/foodContext"
 
 
 export default function allFoods({foods}) {
 
-const [foodTypes, setFoodTypes ] = useState(null)
-const [loading, isLoading ] = useState(true)
-
-
+const { selectedFoods } = useContext(FoodsContext)
 
 
 const foodsCategories = foods?.map(f => f.foodType)
@@ -17,7 +16,7 @@ console.log(foodsCategories);
 
   return (
     <div>
-        { foods ? foods.map( (food, key) => {return <FoodsCard food={food} key={key}/>}) : <p>Food</p> }
+        { foods.map( (food, key) => {return <FoodsCard food={food} key={key}/>})}
     </div>
   )
 }
