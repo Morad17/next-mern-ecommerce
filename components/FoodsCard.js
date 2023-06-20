@@ -3,7 +3,7 @@ import React, { useContext} from 'react'
 import { FoodsContext, } from './foodContext'
 
 export default function foodsCard({
-    food: {id, name, description, cost, calorie, nutrition100g, ingredients, allegens, image, 
+    food: {_id, name, description, cost, calorie, nutrition100g, ingredients, allegens, image, 
         foodType, subCategories}
 }) {
 
@@ -44,11 +44,11 @@ export default function foodsCard({
             <div className="card-ingredients-allegens">
                 <h3>Ingredients</h3>
                 <div className="ingredients">
-                    {ingredients.map((i) => { return <p className="ingredient">{i},</p>} )}
+                    {ingredients.map((i, key) => { return <p className="ingredient" key={key}>{i},</p>} )}
                 </div>
                 <h3>Allegens</h3>
                 <div className="allegens">
-                    {allegens.map((a) => { return <p className="allegen">{a},</p>} )}
+                    {allegens.map((a, key) => { return <p className="allegen" key={key}>{a},</p>} )}
                 </div>
             </div>
         </div>

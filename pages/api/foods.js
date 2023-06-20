@@ -10,7 +10,14 @@ export async function findAllFoods() {
 export default async function handle(req,res) {
 
     await initMongoose()
-    res.json(  await findAllFoods() )
+    const {ids} = req.query
+    if (ids){
+      const idsArray = ids.split(',')
+      res.json(await Food.find({'_id':{$in:ids.Array}}).exec())
+    } else {
+      res.json(  await findAllFoods() )
+    }
+    
   return (
     <div>Foods</div>
   )

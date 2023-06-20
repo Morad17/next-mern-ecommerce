@@ -10,9 +10,9 @@ export default function allFoods({foods}) {
 
 const { selectedFoods } = useContext(FoodsContext)
 
+console.log(selectedFoods)
 
 const foodsCategories = foods?.map(f => f.foodType)
-console.log(foodsCategories);
 
   return (
     <div>
