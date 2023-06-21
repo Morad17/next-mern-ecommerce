@@ -13,9 +13,9 @@ export default async function handle(req,res) {
     const {ids} = req.query
     if (ids){
       const idsArray = ids.split(',')
-      res.json(await Food.find({'_id':{$in:ids.Array}}).exec())
+      res.json(await Food.find({'_id':{$in:idsArray}}).exec())
     } else {
-      res.json(  await findAllFoods() )
+      res.json(await findAllFoods() )
     }
     
   return (

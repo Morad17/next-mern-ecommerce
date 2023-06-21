@@ -3,11 +3,13 @@ import { FoodsContext } from '../components/foodContext'
 
 export default function checkout() {
 
-  const selectedFoods = useContext(FoodsContext)
+  const { selectedFoods, setSelecedfoods }  = useContext(FoodsContext)
   const [foodsInfo, setFoodsInfo] = useState([])
  
   useEffect(()=> {
+    console.log(selectedFoods)
     const uniqueIds = [...new Set(selectedFoods)]
+    
     fetch('/api/foods?ids='+uniqueIds.join(','))
     .then(res => res.json())
     .then(json => setFoodsInfo(json))
