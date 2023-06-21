@@ -114,3 +114,35 @@ a {
   text-align: center;
   justify-content: center;
 }
+
+/*----Checkout Food Card---*/
+
+.checkout-food-card{
+  width: 33vw;
+  display: flex;
+  flex-direction: row;
+}
+.checkout-info{
+  padding: 0 1vw
+}
+.checkout-title{
+  padding: 0;
+  margin: 0;
+}
+
+.checkout-controls, .controls-toggle{
+  display: flex;
+  flex-direction: row;
+}
+
+/*----Checkout---*/
+
+.checkout{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.totals-section{
+  margin-left: 5vw;
+}

@@ -1,5 +1,5 @@
 import MainLayout from '../components/MainLayout'
-import { FoodsContextProvider } from '../components/foodContext'
+import { FoodsContextProvider } from '../components/FoodContext'
 import '../styles/globals.css'
 import '/public/assets/styles/FoodCard.css'
 // import '/public/assets/styles/MainNav.css'

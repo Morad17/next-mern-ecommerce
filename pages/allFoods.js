@@ -3,7 +3,7 @@ import FoodsCard from '../components/FoodsCard'
 import { initMongoose } from "../lib/mongoose"
 import { findAllFoods } from "./api/foods"
 import { useContext } from "react"
-import { FoodsContext } from "../components/foodContext"
+import { FoodsContext } from "../components/FoodContext"
 
 
 export default function allFoods({foods}) {

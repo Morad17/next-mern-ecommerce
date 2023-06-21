@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React, { useContext} from 'react'
-import { FoodsContext, } from './foodContext'
+import { FoodsContext, } from './FoodContext'
 
 export default function foodsCard({
     food: {_id, name, description, cost, calorie, nutrition100g, ingredients, allegens, image, 
