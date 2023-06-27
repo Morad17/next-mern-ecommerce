@@ -17,7 +17,7 @@ export default function MainNav() {
         <ul className="nav-user-links">
           <Link className="nav-links" href="/">Login</Link>
           <Link className="nav-links" href="/">My Account</Link>
-          <Link className="nav-links" href="/">Checkout</Link>
+          <Link className="nav-links" href="/checkout">Checkout</Link>
         </ul>
 
     </nav>
